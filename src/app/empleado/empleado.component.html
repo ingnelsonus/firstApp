@@ -1,0 +1,15 @@
+<p>Nombre:{{nombre}}</p>
+<p>Apellido:{{apellido}}</p>
+<p>Edad:{{edad}}</p>
+<!--<input type="text" [disabled]="enableControls" #empresa placeholder="Ingresa tu empresa" (keyup)="0">-->
+
+<input type="text" placeholder="Ingresa tu empresa" [(ngModel)]="empresa">
+
+<p>Empresa:{{empresa}}</p>
+<p>{{registerText}}</p>
+<label for="registro">Registrado:</label>
+<input type="radio" name="nregistro" value="si" id="registro" [checked]="userLogin" (click)="setUserRegister($event)"/>
+No registrado: <input type="radio" name="nregistro" value="no" (click)="setUserRegister($event)"/>
+
+{{getUserLogIn()}}
+
